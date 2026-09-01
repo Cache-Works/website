@@ -241,7 +241,7 @@ left:0;
 
 width:100%;
 
-padding:24px 8%;
+padding:24px 5%;
 
 backdrop-filter:blur(18px);
 
@@ -261,6 +261,8 @@ justify-content:space-between;
 
 align-items:center;
 
+gap:20px;
+
 }
 
 .brand{
@@ -274,6 +276,8 @@ gap:18px;
 text-decoration:none;
 
 color:white;
+
+flex-shrink:0;
 
 }
 
@@ -301,7 +305,9 @@ color:var(--text2);
 
 display:flex;
 
-gap:34px;
+gap:28px;
+
+align-items:center;
 
 }
 
@@ -314,6 +320,8 @@ color:var(--text2);
 transition:.25s;
 
 font-weight:500;
+
+white-space:nowrap;
 
 }
 
@@ -329,17 +337,36 @@ color:white !important;
 
 }
 
-.github-button{
+.nav-actions {
+
+display:flex;
+
+align-items:center;
+
+gap:14px;
+
+flex-shrink:0;
+
+}
+
+.github-button,
+.play-astra-button{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
 
 text-decoration:none;
 
-padding:13px 28px;
+padding:12px 22px;
 
 border-radius:100px;
 
 background:linear-gradient(135deg,var(--primary),var(--primary2));
 
-color:white;
+color:white !important;
 
 font-weight:700;
 
@@ -347,13 +374,20 @@ transition:.3s;
 
 box-shadow:0 10px 30px rgba(49,182,255,.35);
 
+white-space:nowrap;
+
+font-size:14px;
+
 }
 
-.github-button:hover{
+.github-button:hover,
+.play-astra-button:hover{
 
 transform:translateY(-4px);
 
 box-shadow:0 20px 40px rgba(49,182,255,.5);
+
+color:white !important;
 
 }
 

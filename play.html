@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CacheWorks™ Astra Client Launcher</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="background">
+        <div class="stars"></div>
+
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+
+        <div class="planet planet-1"></div>
+        <div class="planet planet-2"></div>
+
+        <div class="cube cube-1"></div>
+        <div class="cube cube-2"></div>
+        <div class="cube cube-3"></div>
+
+        <div class="orbit orbit-1"></div>
+        <div class="orbit orbit-2"></div>
+    </div>
+
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="brand">
+            <img src="astra-logo.svg" alt="Astra Logo">
+
+            <span>
+                CacheWorks<span class="trademark">™</span>
+            </span>
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="index.html" class="nav-link">
+                <span>⌂</span>
+                Home
+            </a>
+
+            <a href="play.html" class="nav-link active">
+                <span>▶</span>
+                Play
+            </a>
+
+            <a href="downloads.html" class="nav-link">
+                <span>⇩</span>
+                Downloads
+            </a>
+
+        </nav>
+
+
+        <button class="theme-button" aria-label="Toggle theme">
+            ☾
+        </button>
+
+    </header>
+
+
+
+    <!-- MAIN -->
+    <main>
+
+        <section class="hero">
+
+            <div class="logo-container">
+                <img src="astra-logo.svg" class="hero-logo" alt="Astra">
+            </div>
+
+
+            <div class="company-name">
+                CacheWorks<span>™</span>
+            </div>
+
+
+            <h1>
+                <span class="astra-blue">Astra</span>
+                Client Launcher
+            </h1>
+
+
+            <p class="tagline">
+                LIGHTWEIGHT
+                <span>•</span>
+                FAST
+                <span>•</span>
+                WEB-POWERED
+            </p>
+
+
+            <!-- DOWNLOAD CARDS -->
+            <section class="launcher-grid" id="downloads">
+
+
+                <!-- 1.8.8 -->
+                <article class="launcher-card available">
+
+                    <div class="card-top">
+
+                        <div class="wasm-badge">
+                            WASM
+                        </div>
+
+                    </div>
+
+
+                    <div class="card-content">
+
+                        <div class="minecraft-icon">
+                            <div class="cube-face"></div>
+                        </div>
+
+
+                        <h2>
+                            Astra Client
+                            <span>2.1</span>
+                        </h2>
+
+
+                        <p class="version">
+                            1.8.8
+                            <span>(WASM)</span>
+                        </p>
+
+
+                        <button 
+                            class="play-button"
+                            onclick="window.location.href='astra18.html';"
+                        >
+                            <span class="button-icon">▶</span>
+
+                            <span>PLAY</span>
+
+                            <span class="arrow">›</span>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 1.12.2 -->
+                <article class="launcher-card coming-soon">
+
+                    <div class="card-top">
+
+                        <div class="wasm-badge disabled">
+                            WASM
+                        </div>
+
+                    </div>
+
+
+                    <div class="card-content">
+
+                        <div class="minecraft-icon grey">
+                            <div class="cube-face"></div>
+                        </div>
+
+
+                        <h2>
+                            Astra Client 2.1
+                        </h2>
+
+
+                        <p class="version">
+                            1.12.2
+                            <span>(WASM)</span>
+                        </p>
+
+
+                        <button
+                            class="play-button disabled-button"
+                            disabled
+                        >
+                            <span class="button-icon">◷</span>
+
+                            <span>COMING SOON</span>
+
+                            <span class="arrow">›</span>
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div>
+            Built with
+            <span class="heart">♥</span>
+            by CacheWorks<span class="trademark">™</span>
+        </div>
+
+        <div class="footer-subtitle">
+            Faster. Lighter. Better.
+        </div>
+
+
+        <div class="socials">
+
+            <a href="#">◉</a>
+            <a href="#">◈</a>
+            <a href="#">●</a>
+            <a href="#">𝕏</a>
+
+        </div>
+
+    </footer>
+
+
+    <script>
+
+        const themeButton = document.querySelector(".theme-button");
+
+        themeButton.addEventListener("click", () => {
+
+            document.body.classList.toggle("brighter");
+
+        });
+
+    </script>
+
+</body>
+</html>

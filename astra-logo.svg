@@ -1,0 +1,144 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 400 400"
+>
+
+    <defs>
+
+        <linearGradient
+            id="astraBlue"
+            x1="0"
+            y1="1"
+            x2="1"
+            y2="0"
+        >
+            <stop
+                offset="0%"
+                stop-color="#087cff"
+            />
+
+            <stop
+                offset="55%"
+                stop-color="#13b4ff"
+            />
+
+            <stop
+                offset="100%"
+                stop-color="#b8f2ff"
+            />
+        </linearGradient>
+
+
+        <filter id="glow">
+
+            <feGaussianBlur
+                stdDeviation="8"
+                result="blur"
+            />
+
+            <feMerge>
+
+                <feMergeNode
+                    in="blur"
+                />
+
+                <feMergeNode
+                    in="SourceGraphic"
+                />
+
+            </feMerge>
+
+        </filter>
+
+    </defs>
+
+
+    <!-- Logo background -->
+
+    <rect
+        width="400"
+        height="400"
+        rx="90"
+        fill="#050c16"
+    />
+
+
+    <!-- Astra A -->
+
+    <g
+        fill="none"
+        stroke="url(#astraBlue)"
+        stroke-width="18"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        filter="url(#glow)"
+    >
+
+        <path
+            d="M75 275 L195 65 L320 275"
+        />
+
+        <path
+            d="M125 275 L195 105 L260 275"
+        />
+
+        <path
+            d="M140 215 L255 215"
+        />
+
+
+        <!-- Orbit -->
+
+        <ellipse
+            cx="200"
+            cy="190"
+            rx="150"
+            ry="62"
+            transform="rotate(-18 200 190)"
+        />
+
+    </g>
+
+
+    <!-- White highlights -->
+
+    <path
+        d="M95 280 L195 92 L300 280"
+        fill="none"
+        stroke="white"
+        stroke-width="7"
+        opacity=".9"
+    />
+
+
+    <!-- Star -->
+
+    <path
+        d="M295 66
+           L301 82
+           L317 88
+           L301 94
+           L295 110
+           L289 94
+           L273 88
+           L289 82 Z"
+        fill="white"
+    />
+
+
+    <!-- ASTRA text -->
+
+    <text
+        x="200"
+        y="350"
+        text-anchor="middle"
+        font-family="Arial, Segoe UI, sans-serif"
+        font-size="34"
+        font-weight="800"
+        letter-spacing="5"
+        fill="white"
+    >
+        ASTRA
+    </text>
+
+</svg>
