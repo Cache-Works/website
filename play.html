@@ -3,245 +3,350 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>CacheWorks™ Astra Client Launcher</title>
-
+    <title>CacheWorks™ Astral Launcher</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <!-- Background -->
     <div class="background">
         <div class="stars"></div>
-
         <div class="glow glow-1"></div>
         <div class="glow glow-2"></div>
-
         <div class="planet planet-1"></div>
         <div class="planet planet-2"></div>
-
         <div class="cube cube-1"></div>
         <div class="cube cube-2"></div>
         <div class="cube cube-3"></div>
-
         <div class="orbit orbit-1"></div>
         <div class="orbit orbit-2"></div>
     </div>
 
-
     <!-- NAVBAR -->
     <header class="navbar">
-
         <div class="brand">
             <img src="astra-logo.svg" alt="Astra Logo">
-
-            <span>
-                CacheWorks<span class="trademark">™</span>
-            </span>
+            <span>CacheWorks<span class="trademark">™</span></span>
         </div>
 
-
         <nav class="navigation">
-
-            <a href="index.html" class="nav-link">
-                <span>⌂</span>
-                Home
-            </a>
-
-            <a href="play.html" class="nav-link active">
-                <span>▶</span>
-                Play
-            </a>
-
-            <a href="downloads.html" class="nav-link">
-                <span>⇩</span>
-                Downloads
-            </a>
-
+            <a href="index.html" class="nav-link"><span>⌂</span> Home</a>
+            <a href="play.html" class="nav-link active"><span>▶</span> Play</a>
+            <a href="downloads.html" class="nav-link"><span>⇩</span> Downloads</a>
         </nav>
 
-
-        <button class="theme-button" aria-label="Toggle theme">
-            ☾
-        </button>
-
+        <button class="theme-button" aria-label="Toggle theme">☾</button>
     </header>
-
-
 
     <!-- MAIN -->
     <main>
-
         <section class="hero">
-
             <div class="logo-container">
                 <img src="astra-logo.svg" class="hero-logo" alt="Astra">
             </div>
 
+            <div class="company-name">CacheWorks<span>™</span></div>
 
-            <div class="company-name">
-                CacheWorks<span>™</span>
+            <h1><span class="astra-blue">Astra</span> Client Launcher</h1>
+
+            <p class="tagline">LIGHTWEIGHT <span>•</span> FAST <span>•</span> WEB-POWERED</p>
+
+            <!-- SEARCH AND SORT CONTROLS -->
+            <div class="controls-container">
+                <input 
+                    type="text" 
+                    id="versionSearch" 
+                    placeholder="Search client or version..."
+                    onkeyup="updateLauncherGrid()"
+                >
+
+                <div class="sort-wrapper">
+                    <label for="sortSelect">Sort By:</label>
+                    <select id="sortSelect" onchange="updateLauncherGrid()">
+                        <option value="default">Default Order</option>
+                        <option value="alpha-asc">Alphabetical (A - Z)</option>
+                        <option value="alpha-desc">Alphabetical (Z - A)</option>
+                        <option value="version-desc">Version (Newest First)</option>
+                        <option value="version-asc">Version (Oldest First)</option>
+                    </select>
+                </div>
             </div>
 
-
-            <h1>
-                <span class="astra-blue">Astra</span>
-                Client Launcher
-            </h1>
-
-
-            <p class="tagline">
-                LIGHTWEIGHT
-                <span>•</span>
-                FAST
-                <span>•</span>
-                WEB-POWERED
-            </p>
-
-
-            <!-- DOWNLOAD CARDS -->
+            <!-- DOWNLOAD CARDS GRID -->
             <section class="launcher-grid" id="downloads">
 
-
-                <!-- 1.8.8 -->
-                <article class="launcher-card available">
-
-                    <div class="card-top">
-
-                        <div class="wasm-badge">
-                            WASM
-                        </div>
-
-                    </div>
-
-
+                <article class="launcher-card available" data-name="EaglercraftX" data-version="1.8.8" data-order="11" data-search="eaglercraftx 1.8.8 wasm js">
+                    <div class="card-top"><div class="wasm-badge">WASM / JS</div></div>
                     <div class="card-content">
-
-                        <div class="minecraft-icon">
-                            <div class="cube-face"></div>
+                        <div class="minecraft-icon"><div class="cube-face"></div></div>
+                        <h2>EaglercraftX</h2>
+                        <p class="version">1.8.8</p>
+                        <div class="button-group">
+                            <button class="play-button" onclick="launchGame('eaglercraftx-1.8.8-wasm')">▶ WASM</button>
+                            <button class="play-button" onclick="launchGame('eaglercraftx-1.8.8-js')">▶ JS</button>
                         </div>
-
-
-                        <h2>
-                            Astra Client
-                            <span>2.1</span>
-                        </h2>
-
-
-                        <p class="version">
-                            1.8.8
-                            <span>(WASM)</span>
-                        </p>
-
-
-                        <button 
-                            class="play-button"
-                            onclick="window.location.href='astra18.html';"
-                        >
-                            <span class="button-icon">▶</span>
-
-                            <span>PLAY</span>
-
-                            <span class="arrow">›</span>
-                        </button>
-
                     </div>
-
                 </article>
 
-
-
-                <!-- 1.12.2 -->
-                <article class="launcher-card coming-soon">
-
-                    <div class="card-top">
-
-                        <div class="wasm-badge disabled">
-                            WASM
-                        </div>
-
-                    </div>
-
-
+                <article class="launcher-card available" data-name="Eaglercraft" data-version="1.12.2" data-order="13" data-search="eaglercraft 1.12.2 wasm js">
+                    <div class="card-top"><div class="wasm-badge">WASM / JS</div></div>
                     <div class="card-content">
-
-                        <div class="minecraft-icon grey">
-                            <div class="cube-face"></div>
+                        <div class="minecraft-icon"><div class="cube-face"></div></div>
+                        <h2>Eaglercraft</h2>
+                        <p class="version">1.12.2</p>
+                        <div class="button-group">
+                            <button class="play-button" onclick="launchGame('eaglercraft-1.12.2-wasm')">▶ WASM</button>
+                            <button class="play-button" onclick="launchGame('eaglercraft-1.12.2-js')">▶ JS</button>
                         </div>
-
-
-                        <h2>
-                            Astra Client 2.1
-                        </h2>
-
-
-                        <p class="version">
-                            1.12.2
-                            <span>(WASM)</span>
-                        </p>
-
-
-                        <button
-                            class="play-button disabled-button"
-                            disabled
-                        >
-                            <span class="button-icon">◷</span>
-
-                            <span>COMING SOON</span>
-
-                            <span class="arrow">›</span>
-                        </button>
-
                     </div>
+                </article>
 
+                <article class="launcher-card available" data-name="Eaglercraft" data-version="1.5.2" data-order="8" data-search="eaglercraft 1.5.2 js">
+                    <div class="card-top"><div class="wasm-badge">JS</div></div>
+                    <div class="card-content">
+                        <div class="minecraft-icon"><div class="cube-face"></div></div>
+                        <h2>Eaglercraft</h2>
+                        <p class="version">1.5.2</p>
+                        <button class="play-button" onclick="launchGame('eaglercraft-1.5.2-js')">▶ PLAY JS</button>
+                    </div>
+                </article>
+
+                <article class="launcher-card available" data-name="PixelClient" data-version="1.12.2" data-order="13" data-search="pixelclient 1.12.2 wasm js">
+                    <div class="card-top"><div class="wasm-badge">WASM / JS</div></div>
+                    <div class="card-content">
+                        <div class="minecraft-icon"><div class="cube-face"></div></div>
+                        <h2>PixelClient</h2>
+                        <p class="version">1.12.2</p>
+                        <div class="button-group">
+                            <button class="play-button" onclick="launchGame('pixelclient-1.12.2-wasm')">▶ WASM</button>
+                            <button class="play-button" onclick="launchGame('pixelclient-1.12.2-js')">▶ JS</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="launcher-card available" data-name="PixelClient" data-version="1.8.8" data-order="11" data-search="pixelclient 1.8.8 wasm js">
+                    <div class="card-top"><div class="wasm-badge">WASM / JS</div></div>
+                    <div class="card-content">
+                        <div class="minecraft-icon"><div class="cube-face"></div></div>
+                        <h2>PixelClient</h2>
+                        <p class="version">1.8.8</p>
+                        <div class="button-group">
+                            <button class="play-button" onclick="launchGame('pixelclient-1.8.8-wasm')">▶ WASM</button>
+                            <button class="play-button" onclick="launchGame('pixelclient-1.8.8-js')">▶ JS</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="launcher-card available" data-name="Tuff Client" data-version="1.12.2" data-order="13" data-search="tuff client 1.12.2 js wasm">
+                    <div class="card-top"><div class="wasm-badge">WASM / JS</div></div>
+                    <div class="card-content">
+                        <div class="minecraft-icon"><div class="cube-face"></div></div>
+                        <h2>Tuff Client</h2>
+                        <p class="version">1.12.2</p>
+                        <div class="button-group">
+                            <button class="play-button" onclick="launchGame('tuff-1.12.2-wasm')">▶ WASM</button>
+                            <button class="play-button" onclick="launchGame('tuff-1.12.2-js')">▶ JS</button>
+                        </div>
+                    </div>
+                </article>
+
+                 <article class="launcher-card available" data-name="Astra Client" data-version="1.8.8" data-order="11" data-search="astra client 2.1 1.8.8 wasm js">
+    <div class="card-top"><div class="wasm-badge">WASM / JS</div></div>
+    <div class="card-content">
+        <div class="minecraft-icon"><div class="cube-face"></div></div>
+        <h2>Astra Client 2.1</h2>
+        <p class="version">1.8.8</p>
+        <div class="button-group">
+            <button class="play-button" onclick="launchGame('astra-2.1-1.8.8-wasm')">▶ WASM</button>
+            <button class="play-button" onclick="launchGame('astra-2.1-1.8.8-js')">▶ JS</button>
+        </div>
+    </div>
+</article>
+
+                <article class="launcher-card available" data-name="Astra Client" data-version="1.8.8" data-order="11" data-search="astra client 1.6 1.8.8 wasm js">
+                    <div class="card-top"><div class="wasm-badge">WASM / JS</div></div>
+                    <div class="card-content">
+                        <div class="minecraft-icon"><div class="cube-face"></div></div>
+                        <h2>Astra Client 1.6</h2>
+                        <p class="version">1.8.8</p>
+                        <div class="button-group">
+                            <button class="play-button" onclick="launchGame('astra-1.6-1.8.8-wasm')">▶ WASM</button>
+                            <button class="play-button" onclick="launchGame('astra-1.6-1.8.8-js')">▶ JS</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="launcher-card available" data-name="Starlike Client" data-version="0.4.2" data-order="14" data-search="starlike client 0.4.2 js">
+                    <div class="card-top"><div class="wasm-badge">JS</div></div>
+                    <div class="card-content">
+                        <div class="minecraft-icon"><div class="cube-face"></div></div>
+                        <h2>Starlike Client 0.4.2</h2>
+                        <p class="version">JS Version</p>
+                        <button class="play-button" onclick="launchGame('starlike-0.4.2-js')">▶ PLAY JS</button>
+                    </div>
+                </article>
+
+                <article class="launcher-card available" data-name="Resent Client" data-version="1.0" data-order="14" data-search="resent client js">
+                    <div class="card-top"><div class="wasm-badge">JS</div></div>
+                    <div class="card-content">
+                        <div class="minecraft-icon"><div class="cube-face"></div></div>
+                        <h2>Resent Client</h2>
+                        <p class="version">JS Version</p>
+                        <button class="play-button" onclick="launchGame('resent-js')">▶ PLAY JS</button>
+                    </div>
+                </article>
+
+                <article class="launcher-card available" data-name="Winston Horror Client" data-version="1.0" data-order="14" data-search="winston horror client js">
+                    <div class="card-top"><div class="wasm-badge">JS</div></div>
+                    <div class="card-content">
+                        <div class="minecraft-icon"><div class="cube-face"></div></div>
+                        <h2>Winston Horror Client</h2>
+                        <p class="version">JS Version</p>
+                        <button class="play-button" onclick="launchGame('winston-js')">▶ PLAY JS</button>
+                    </div>
+                </article>
+
+                <article class="launcher-card available" data-name="Z-Client" data-version="1.11" data-order="12" data-search="z-client 1.11 js">
+                    <div class="card-top"><div class="wasm-badge">JS</div></div>
+                    <div class="card-content">
+                        <div class="minecraft-icon"><div class="cube-face"></div></div>
+                        <h2>Z-Client</h2>
+                        <p class="version">1.11 (JS)</p>
+                        <button class="play-button" onclick="launchGame('z-client-1.11-js')">▶ PLAY JS</button>
+                    </div>
+                </article>
+
+                <article class="launcher-card available" data-name="Vanilla Release" data-version="1.6.4" data-order="9" data-search="release 1.6.4 js">
+                    <div class="card-top"><div class="wasm-badge">JS</div></div>
+                    <div class="card-content">
+                        <div class="minecraft-icon"><div class="cube-face"></div></div>
+                        <h2>Vanilla Release</h2>
+                        <p class="version">1.6.4 (JS)</p>
+                        <button class="play-button" onclick="launchGame('release-1.6.4-js')">▶ PLAY JS</button>
+                    </div>
+                </article>
+
+                <article class="launcher-card available" data-name="Vanilla Release" data-version="1.2.5" data-order="7" data-search="release 1.2.5 js">
+                    <div class="card-top"><div class="wasm-badge">JS</div></div>
+                    <div class="card-content">
+                        <div class="minecraft-icon"><div class="cube-face"></div></div>
+                        <h2>Vanilla Release</h2>
+                        <p class="version">1.2.5 (JS)</p>
+                        <button class="play-button" onclick="launchGame('release-1.2.5-js')">▶ PLAY JS</button>
+                    </div>
+                </article>
+
+                <article class="launcher-card available" data-name="Vanilla Beta" data-version="0.1.7.3" data-order="6" data-search="beta 1.7.3 js">
+                    <div class="card-top"><div class="wasm-badge">JS</div></div>
+                    <div class="card-content">
+                        <div class="minecraft-icon"><div class="cube-face"></div></div>
+                        <h2>Vanilla Beta</h2>
+                        <p class="version">b1.7.3 (JS)</p>
+                        <button class="play-button" onclick="launchGame('beta-1.7.3-js')">▶ PLAY JS</button>
+                    </div>
+                </article>
+
+                <article class="launcher-card available" data-name="Vanilla Beta" data-version="0.1.3" data-order="5" data-search="beta 1.3 js">
+                    <div class="card-top"><div class="wasm-badge">JS</div></div>
+                    <div class="card-content">
+                        <div class="minecraft-icon"><div class="cube-face"></div></div>
+                        <h2>Vanilla Beta</h2>
+                        <p class="version">b1.3 (JS)</p>
+                        <button class="play-button" onclick="launchGame('beta-1.3-js')">▶ PLAY JS</button>
+                    </div>
+                </article>
+
+                <article class="launcher-card available" data-name="Vanilla Beta" data-version="0.1.1" data-order="4" data-search="beta 1.1 js">
+                    <div class="card-top"><div class="wasm-badge">JS</div></div>
+                    <div class="card-content">
+                        <div class="minecraft-icon"><div class="cube-face"></div></div>
+                        <h2>Vanilla Beta</h2>
+                        <p class="version">b1.1 (JS)</p>
+                        <button class="play-button" onclick="launchGame('beta-1.1-js')">▶ PLAY JS</button>
+                    </div>
+                </article>
+
+                <article class="launcher-card available" data-name="Vanilla Alpha" data-version="0.0.1.2.6" data-order="3" data-search="alpha 1.2.6 js">
+                    <div class="card-top"><div class="wasm-badge">JS</div></div>
+                    <div class="card-content">
+                        <div class="minecraft-icon"><div class="cube-face"></div></div>
+                        <h2>Vanilla Alpha</h2>
+                        <p class="version">a1.2.6 (JS)</p>
+                        <button class="play-button" onclick="launchGame('alpha-1.2.6-js')">▶ PLAY JS</button>
+                    </div>
+                </article>
+
+                <article class="launcher-card available" data-name="Vanilla Classic" data-version="0.0.0.30" data-order="1" data-search="classic 0.30 wasm">
+                    <div class="card-top"><div class="wasm-badge">WASM</div></div>
+                    <div class="card-content">
+                        <div class="minecraft-icon"><div class="cube-face"></div></div>
+                        <h2>Vanilla Classic</h2>
+                        <p class="version">c0.30 (WASM)</p>
+                        <button class="play-button" onclick="launchGame('classic-0.30-wasm')">▶ PLAY WASM</button>
+                    </div>
                 </article>
 
             </section>
-
         </section>
-
     </main>
-
-
 
     <!-- FOOTER -->
     <footer>
-
-        <div>
-            Built with
-            <span class="heart">♥</span>
-            by CacheWorks<span class="trademark">™</span>
-        </div>
-
-        <div class="footer-subtitle">
-            Faster. Lighter. Better.
-        </div>
-
-
+        <div>Built with <span class="heart">♥</span> by CacheWorks<span class="trademark">™</span></div>
+        <div class="footer-subtitle">Faster. Lighter. Better.</div>
         <div class="socials">
-
             <a href="#">◉</a>
             <a href="#">◈</a>
             <a href="#">●</a>
             <a href="#">𝕏</a>
-
         </div>
-
     </footer>
 
-
     <script>
-
         const themeButton = document.querySelector(".theme-button");
-
         themeButton.addEventListener("click", () => {
-
             document.body.classList.toggle("brighter");
-
         });
 
-    </script>
+        // Store original DOM array for reset capability
+        const gridContainer = id = document.getElementById('downloads');
+        const originalCards = Array.from(gridContainer.children);
 
+        function updateLauncherGrid() {
+            const query = document.getElementById('versionSearch').value.toLowerCase();
+            const sortMode = document.getElementById('sortSelect').value;
+
+            // Filter search matching
+            let visibleCards = originalCards.filter(card => {
+                const searchKeywords = card.getAttribute('data-search');
+                return searchKeywords.includes(query);
+            });
+
+            // Handle Sorting
+            if (sortMode === 'alpha-asc') {
+                visibleCards.sort((a, b) => a.getAttribute('data-name').localeCompare(b.getAttribute('data-name')));
+            } else if (sortMode === 'alpha-desc') {
+                visibleCards.sort((a, b) => b.getAttribute('data-name').localeCompare(a.getAttribute('data-name')));
+            } else if (sortMode === 'version-desc') {
+                visibleCards.sort((a, b) => parseInt(b.getAttribute('data-order')) - parseInt(a.getAttribute('data-order')));
+            } else if (sortMode === 'version-asc') {
+                visibleCards.sort((a, b) => parseInt(a.getAttribute('data-order')) - parseInt(b.getAttribute('data-order')));
+            }
+
+            // Render updated order
+            gridContainer.innerHTML = '';
+            originalCards.forEach(card => card.style.display = 'none');
+            
+            visibleCards.forEach(card => {
+                card.style.display = 'block';
+                gridContainer.appendChild(card);
+            });
+        }
+
+        function launchGame(clientKey) {
+            console.log("Launching client: " + clientKey);
+            alert("Launching " + clientKey + "...");
+        }
+    </script>
 </body>
 </html>
