@@ -265,26 +265,20 @@ gap:20px;
 
 }
 
-.brand{
-
-display:flex;
-
-align-items:center;
-
-gap:18px;
-
-text-decoration:none;
-
-color:white;
-
-flex-shrink:0;
-
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    text-decoration: none;
+    color: white;
+    flex-shrink: 0;
+    isolation: isolate; /* Fixes mix-blend-mode inside backdrop-filter */
 }
 
-.brand img{
-
-width:58px;
-
+.brand img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
 }
 
 .brand h2{
@@ -660,13 +654,15 @@ animation:rotateGlow 14s linear infinite;
 
 .hero-logo-card img{
 
-width:220px;
+width:320px;
 
 position:relative;
 
 z-index:2;
 
 transition:.4s;
+
+mix-blend-mode:screen;
 
 }
 
@@ -1325,6 +1321,8 @@ width:75px;
 
 margin-bottom:18px;
 
+mix-blend-mode:screen;
+
 }
 
 .footer-grid h3{
@@ -1559,7 +1557,7 @@ height:300px;
 
 .hero-logo-card img{
 
-width:160px;
+width:220px;
 
 }
 
@@ -1681,7 +1679,7 @@ border-radius:25px;
 
 .hero-logo-card img{
 
-width:130px;
+width:180px;
 
 }
 

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100%" height="100%">
+  <!-- Dark Rounded Square Background for High Contrast -->
+  <rect width="64" height="64" rx="14" fill="#09101b"/>
+
+  <g transform="translate(4, 4)">
+    <!-- Main Outer 'C' Frame -->
+    <path d="M 36 12 L 24 12 L 12 24 L 12 40 L 24 52 L 36 52" 
+          fill="none" 
+          stroke="#00d2ff" 
+          stroke-width="5" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+
+    <!-- Simplified Grid Pixel Blocks inside 'C' -->
+    <rect x="18" y="20" width="4" height="4" fill="#00d2ff" rx="1"/>
+    <rect x="24" y="20" width="4" height="4" fill="#0088ff" rx="1"/>
+    <rect x="18" y="26" width="4" height="4" fill="#0088ff" rx="1"/>
+    <rect x="24" y="26" width="4" height="4" fill="#00d2ff" rx="1"/>
+    <rect x="18" y="32" width="4" height="4" fill="#00d2ff" rx="1"/>
+    <rect x="24" y="32" width="4" height="4" fill="#0088ff" rx="1"/>
+    <rect x="18" y="38" width="4" height="4" fill="#0088ff" rx="1"/>
+
+    <!-- Central 'W' Shape -->
+    <path d="M 27 22 L 33 42 L 38 29 L 43 42 L 49 22" 
+          fill="none" 
+          stroke="#ffffff" 
+          stroke-width="5.5" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+
+    <!-- Circuit Traces & Nodes -->
+    <path d="M 47 25 L 53 25 M 48 32 L 54 32 M 46 39 L 52 39" 
+          stroke="#00d2ff" 
+          stroke-width="3" 
+          stroke-linecap="round"/>
+    
+    <circle cx="53" cy="25" r="2.5" fill="#00d2ff"/>
+    <circle cx="54" cy="32" r="2.5" fill="#00d2ff"/>
+    <circle cx="52" cy="39" r="2.5" fill="#00d2ff"/>
+  </g>
+</svg>
